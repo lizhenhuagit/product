@@ -1,0 +1,14 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: product
+  datasource:
+       driver-class-name: com.mysql.jdbc.Driver
+       username: root
+       password: abc123456
+       url: jdbc:mysql://10.10.51.140:4002/H1?characterEncoding=utf-8&useSSL=false
+#server:
+#  port: 8761
