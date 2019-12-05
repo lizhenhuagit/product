@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.product.mapper.UserMapper" >
+
+    <insert id="insertu" parameterType="com.green.product.pojo.User" >
+        INSERT ignore INTO
+         user
+        (id,name)
+        VALUES
+        (#{id}, #{name})
+    </insert>
+
+    <update id="update" parameterType="java.util.Map" >
+        UPDATE
+        tb_user
+        SET
+        username = #{user.username},age = #{user.age}
+        WHERE
+        id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="java.lang.Integer" >
+        DELETE FROM
+        tb_user
+        WHERE
+        id = #{id}
+    </delete>
+</mapper>

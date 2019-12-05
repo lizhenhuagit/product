@@ -3,6 +3,7 @@ package com.green.product.mapper;
 import com.green.product.ProductApplication;
 import com.green.product.pojo.User;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,16 @@ public class userMapperTest {
     @Test
     public void mapperTest(){
         User u=new User();
-        u.setId(4);
-        userMapper.insert(u);
+        u.setId(8);
+        u.setName("marry");
+        int insert = userMapper.insertu(u);
+        System.out.println(insert);
+    }
+    @Test
+    public void Test(){
+        String s="abc";
+        String s1 =new String("abc");
+        System.out.println(StringUtils.equals(s,s1));
+
     }
 }
